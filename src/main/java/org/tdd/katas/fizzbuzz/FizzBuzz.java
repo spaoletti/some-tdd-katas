@@ -2,13 +2,13 @@ package org.tdd.katas.fizzbuzz;
 
 public class FizzBuzz {
     public String convert(int i) {
-        if (i % 3 == 0 && i % 5 == 0) {
-            return "fizzbuzz";
-        } else if (i % 3 == 0) {
-            return "fizz";
-        } else if (i % 5 == 0) {
-            return "buzz";
+        String fizzbuzz = "";
+        if (i % 3 == 0) {
+            fizzbuzz += "fizz";
         }
-        return String.valueOf(i);
+        if (i % 5 == 0) {
+            fizzbuzz += "buzz";
+        }
+        return fizzbuzz.isEmpty() ? String.valueOf(i) : fizzbuzz;
     }
 }
